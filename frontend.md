@@ -2,22 +2,12 @@
 
 ### 1. Регистрация на Cryptorank
 Вам нужно зарегистрироваться на [Cryptorank](https://cryptorank.io/)  
-После регистрации [сгенерируйте](https://cryptorank.io/profile/api) себе API ключ для запросов
+После регистрации [сгенерируйте](https://cryptorank.io/public-api/keys) себе API ключ для запросов
 
+### 2. Высчитать историческую стоимость
 
-### 2. Высчитать From и To ATH  
-
-ATH (All Time High) – это самое высокое значение цены за все время существования криптовалюты  
-
-Вам нужно высчитать From ATH - на сколько цена монеты упала в процентном соотношении  
-и To ATH - на сколько цене монеты нужно вырасти в процентном соотношении, чтобы догнать ATH  
-
+Даны значения percentChange24h, percentChange7d и прочие в процентах и текущая цена в USD. Необходимо вычислить сколько стоила монета в эти периоды historicalPrice24h, historicalPrice7d и тд. 
 Функцию расчета покрыть тестами.    
-
-API для запроса данных по BTC  
-https://tstapi.cryptorank.io/v0/coins/bitcoin    
-_Цену вы найдёте в объекте price, а текущий ATH в объекте athPrice   
-Используйте цену в USD_
 
 ---
 
@@ -26,20 +16,22 @@ _Цену вы найдёте в объекте price, а текущий ATH в 
 
 1. Конвертер. Где пользователь может конвертировать из одной валюты в другую.  
 Пример: https://cryptorank.io/converter
-2. Текущие курсы криптовалют.  
+
+3. Текущие курсы криптовалют.  
 На странице пользователь видит таблицу с колонками Name, Price USD, Circulating Supply, Market Cap, Category   
 Пример: https://cryptorank.io/watchlist/9a31a11dfe4b    
-**Добавить дополнительные колонки From ATH и To ATH используя функцию из п.2**
+**Добавить дополнительные колонки percentChange используя функцию из п.2**
+**Использовать пагинацию с помощью limit и offset**
+
 
 API для запроса списка криптовалют  
-https://api.cryptorank.io/v1/currencies/1?api_key=YOUR_API_KEY   
+https://api.cryptorank.io/v1/currencies/1?api_key=YOUR_API_KEY&limit=10&offset=0
 **YOUR_API_KEY** - это ключ который вы [сгенерировали](https://cryptorank.io/profile/api)
-
 
 ---
 
 **Плюсом будет:**
-* Хорошая оптимизация по Pagespeed/Lighthouse
+* Правильное использование SSR, можно запросить данные для первой страницы монет в таблице
 * Тесты ([Jest](https://jestjs.io/ru/))
 * Грамотная настройка конфигов проекта
 
