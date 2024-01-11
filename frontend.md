@@ -12,7 +12,7 @@ https://api.cryptorank.io/v1/currencies/1?api_key=YOUR_API_KEY&limit=10&offset=0
 
 В ответе на запрос присутствуют значения: 
 1) price - это текущая цена монеты;
-2) percentChange24h, percentChange7d, percentChange30d, percentChange3m, percentChange6m - эти значение отображают, насколько процентов изменилась цена монеты за соответствующий промежуток.
+2) percentChange24h, percentChange7d, percentChange30d, percentChange3m, percentChange6m - эти значение отображают, на сколько процентов изменилась цена монеты за соответствующий промежуток.
 Необходимо вычислить сколько стоила монета в эти периоды. 
 Функцию расчета покрыть тестами.
 
