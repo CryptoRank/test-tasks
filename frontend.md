@@ -4,10 +4,17 @@
 Вам нужно зарегистрироваться на [Cryptorank](https://cryptorank.io/)  
 После регистрации [сгенерируйте](https://cryptorank.io/public-api/keys) себе API ключ для запросов
 
+API для запроса списка криптовалют  
+https://api.cryptorank.io/v1/currencies/1?api_key=YOUR_API_KEY&limit=10&offset=0
+**YOUR_API_KEY** - это ключ который вы [сгенерировали](https://cryptorank.io/profile/api)
+
 ### 2. Высчитать историческую стоимость
 
-Даны значения percentChange24h, percentChange7d и прочие в процентах и текущая цена в USD. Необходимо вычислить сколько стоила монета в эти периоды historicalPrice24h, historicalPrice7d и тд. 
-Функцию расчета покрыть тестами.    
+В ответе на запрос присутствуют значения: 
+1) price - это текущая цена монеты;
+2) percentChange24h, percentChange7d, percentChange30d, percentChange3m, percentChange6m - эти значение отображают, насколько процентов изменилась цена монеты за соответствующий промежуток.
+Необходимо вычислить сколько стоила монета в эти периоды. 
+Функцию расчета покрыть тестами.
 
 ---
 
@@ -19,14 +26,11 @@
 
 3. Текущие курсы криптовалют.  
 На странице пользователь видит таблицу с колонками Name, Price USD, Circulating Supply, Market Cap, Category   
-Пример: https://cryptorank.io/watchlist/9a31a11dfe4b    
-**Добавить дополнительные колонки percentChange используя функцию из п.2**
-**Использовать пагинацию с помощью limit и offset**
+Пример: https://cryptorank.io/watchlist/9a31a11dfe4b
 
+**Добавить дополнительные колонки percentChange, используя функцию из п.2**
 
-API для запроса списка криптовалют  
-https://api.cryptorank.io/v1/currencies/1?api_key=YOUR_API_KEY&limit=10&offset=0
-**YOUR_API_KEY** - это ключ который вы [сгенерировали](https://cryptorank.io/profile/api)
+**Внедрить пагинацию с помощью limit и offset**
 
 ---
 
