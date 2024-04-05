@@ -16,11 +16,13 @@ https://api.cryptorank.io/v1/currencies?api_key=YOUR_API_KEY&limit=10&offset=0
 1. Конвертер. Где пользователь может конвертировать из одной валюты в другую.
 
 Пример: Мобильное приложение CryptoRank [iOS](https://apps.apple.com/ru/app/cryptorank-tracker-portfolio/id1609951971), [Android](https://play.google.com/store/apps/details?id=com.cryptorank&hl=en_US) > монета Bitcoin > таб Overview
-![telegram-cloud-photo-size-2-5224592016824980684-y](https://github.com/novev9/cr-test-tast/assets/20814827/a7b17a42-85e1-4638-b3f7-a62d0424cee8)
+![telegram-cloud-photo-size-2-5224592016824980684-y](https://github.com/novev9/test-tasks/assets/20814827/85c3e6b4-95d2-401b-98e8-587dda6fa2ef)
+
 
 
 2. Список криптовалют для выбора конвертера.
-![telegram-cloud-photo-size-2-5224592016824980690-x](https://github.com/novev9/cr-test-tast/assets/20814827/6c034561-cbf7-4866-8dcb-c80b8dbe3389)
+![telegram-cloud-photo-size-2-5224592016824980690-x](https://github.com/novev9/test-tasks/assets/20814827/6348cc47-8119-4fdd-b17d-a8089c2f6a27)
+
 
 
 Добавить дополнительно:
